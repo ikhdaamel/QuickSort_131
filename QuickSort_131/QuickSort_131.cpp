@@ -3,7 +3,7 @@ using namespace std;
 
 
 int arr[20];                //array of integres to hold values
-int cmp_cout = 0;           //number of comparasion
+int cmp_count = 0;           //number of comparasion
 int mov_cout = 0;           //number of data movements
 int n;
 
@@ -54,15 +54,16 @@ void q_short(int low, int high)
 
     i = low + 1;                                //langkah algoritma 3
     j = high;                                   //langkah algoritma 4
-}
+    
 
-while (i <= j)                                 //langkah algoritma 10
-{
-    //search for an element greather than pivot
-    while ((arr[i] <= pivot) && (i <= high))        //langkah algoritma 5
+    while (i <= j)                                 //langkah algoritma 10
     {
-        i++;                                        //langkah algoritma 6
-        cmp_count++;
+        //search for an element greather than pivot
+        while ((arr[i] <= pivot) && (i <= high))        //langkah algoritma 5
+        {
+            i++;                                        //langkah algoritma 6
+            cmp_count++;
+        }
     }
     cmp_count++;
 
@@ -76,8 +77,16 @@ while (i <= j)                                 //langkah algoritma 10
 
     //if the greater element is on the left of the element
     if (i < j)                                      //langkah algoritma 9
+    {
 
+        //swap the element at index i whit the element at index j
+        swap(i, j);
+        mov_count++;
+    }
 }
+
+//j now containt the index of the last element in the sorted list
+if (low < j)                                           //langkah algoritma 11
 
 
 
