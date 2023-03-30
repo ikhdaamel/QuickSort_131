@@ -4,7 +4,7 @@ using namespace std;
 
 int arr[20];                //array of integres to hold values
 int cmp_count = 0;           //number of comparasion
-int mov_cout = 0;           //number of data movements
+int mov_count = 0;           //number of data movements
 int n;
 
 void input() {
@@ -54,7 +54,7 @@ void q_short(int low, int high)
 
     i = low + 1;                                //langkah algoritma 3
     j = high;                                   //langkah algoritma 4
-    
+
 
     while (i <= j)                                 //langkah algoritma 10
     {
@@ -83,18 +83,27 @@ void q_short(int low, int high)
         swap(i, j);
         mov_count++;
     }
+
+    //j now containt the index of the last element in the sorted list
+    if (low < j)                                           //langkah algoritma 11
+    {
+
+        //move the pivot to its correct position in the list
+        swap(low, j);
+        mov_count++;
+    }
+    //sort the list on the left of pivot using quick sort
+    q_short(low, j - 1);                                    //langkah algoritma 12
+
+    //sort the list on the right of pivot using quick sort
+    q_short(j + 1, high);                                    //langkah algoritma 13
+
 }
 
-//j now containt the index of the last element in the sorted list
-if (low < j)                                           //langkah algoritma 11
-{
+void display() {
+    cout << "\n==========" << endl;
+    cout << "sorted array" << endl;
+    cout << "============" << endl;
 
-    //move the pivot to its correct position in the list
-    swap(low, j);
-    mov_count++;
+
 }
-//sort the list on the left of pivot using quick sort
-q_short(low, j - 1);                                    //langkah algoritma 12
-
-//sort the list on the right of pivot using quick sort
-q_sort(j + 1, high);                                    //langkah algoritma 13
