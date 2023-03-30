@@ -10,7 +10,7 @@ int n;
 void input() {
     while (true)
     {
-        cout << "masukan panjang elemnet array : ";
+        cout << "masukan panjang element array : ";
         cin >> n;
 
         if (n <= 20)
@@ -64,25 +64,27 @@ void q_short(int low, int high)
             i++;                                        //langkah algoritma 6
             cmp_count++;
         }
-    }
-    cmp_count++;
-
-    //search for al element less than or equal to pivot
-    while ((arr[j] > pivot) && (j >= low))          //langkah algoritma 7
-    {
-        j--;                                        //langkah algoritma 8
         cmp_count++;
-    }
-    cmp_count++;
+        //search for al element less than or equal to pivot
+        while ((arr[j] > pivot) && (j >= low))          //langkah algoritma 7
+        {
+            j--;                                        //langkah algoritma 8
+            cmp_count++;
+        }
+        cmp_count++;
 
-    //if the greater element is on the left of the element
-    if (i < j)                                      //langkah algoritma 9
-    {
+        //if the greater element is on the left of the element
+        if (i < j)                                      //langkah algoritma 9
+        {
 
-        //swap the element at index i whit the element at index j
-        swap(i, j);
-        mov_count++;
+            //swap the element at index i whit the element at index j
+            swap(i, j);
+            mov_count++;
+        }
     }
+   
+
+   
 
     //j now containt the index of the last element in the sorted list
     if (low < j)                                           //langkah algoritma 11
