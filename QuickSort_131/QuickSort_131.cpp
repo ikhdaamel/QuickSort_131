@@ -5,7 +5,7 @@ using namespace std;
 int arr[20];                //array of integres to hold values
 int cmp_cout = 0;           //number of comparasion
 int mov_cout = 0;           //number of data movements
-int n
+int n;
 
 void input() {
     while (true)
@@ -56,8 +56,7 @@ void q_short(int low, int high)
     j = high;                                   //langkah algoritma 4
 }
 
+while (i <= j)                                 //langkah algoritma 10
 
 
-{
-    std::cout << "Hello World!\n";
-}
+
