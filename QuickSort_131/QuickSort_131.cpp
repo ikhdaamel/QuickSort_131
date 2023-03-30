@@ -60,6 +60,11 @@ while (i <= j)                                 //langkah algoritma 10
 {
     //search for an element greather than pivot
     while ((arr[i] <= pivot) && (i <= high))        //langkah algoritma 5
+    {
+        i++;                                        //langkah algoritma 6
+        cmp_count++;
+    }
+    cmp_count++;
 }
 
 
