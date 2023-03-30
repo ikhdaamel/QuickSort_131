@@ -57,6 +57,10 @@ void q_short(int low, int high)
 }
 
 while (i <= j)                                 //langkah algoritma 10
+{
+    //search for an element greather than pivot
+    while ((arr[i] <= pivot) && (i <= high))        //langkah algoritma 5
+}
 
 
 
