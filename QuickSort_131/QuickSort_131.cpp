@@ -96,5 +96,5 @@ if (low < j)                                           //langkah algoritma 11
 //sort the list on the left of pivot using quick sort
 q_short(low, j - 1);                                    //langkah algoritma 12
 
-
-
+//sort the list on the right of pivot using quick sort
+q_sort(j + 1, high);                                    //langkah algoritma 13
