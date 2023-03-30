@@ -68,6 +68,11 @@ while (i <= j)                                 //langkah algoritma 10
 
     //search for al element less than or equal to pivot
     while ((arr[j] > pivot) && (j >= low))          //langkah algoritma 7
+    {
+        j--;                                        //langkah algoritma 8
+        cmp_count++;
+    }
+    cmp_count++;
 
 
 
