@@ -74,7 +74,8 @@ while (i <= j)                                 //langkah algoritma 10
     }
     cmp_count++;
 
-
+    //if the greater element is on the left of the element
+    if (i < j)                                      //langkah algoritma 9
 
 }
 
