@@ -28,8 +28,22 @@ void input() {
         cout << "<" << (i + 1) << ">";
         cin >> arr[i];
     }
-
 }
+
+// swaps the element st index x with the element at index y
+void swap(int x, int y)
+{
+    int temp;
+
+    temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
+
+
+
+
+
 {
     std::cout << "Hello World!\n";
 }
